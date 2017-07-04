@@ -1,0 +1,27 @@
+.album {
+    text-align: center;
+}
+.album img {
+    width: 30px;
+    height: 30px;
+}
+.album-content {
+    background-color: gray;
+    width: 100px;
+    padding-top: 20px;
+}
+.album-content p {
+    color: white;
+}
+
+.fotos {
+    text-align: center;
+}
+.fotos img {
+    width: 80px;
+    height: 80px;
+}
+
+.footer {
+    text-align: center;
+}

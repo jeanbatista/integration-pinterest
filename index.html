@@ -1,0 +1,111 @@
+<!DOCTYPE >
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/style.css">
+        <script src="./node_modules/jquery/dist/jquery.min.js"></script>    
+        <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>    
+        <script type="text/javascript" src="./script.js"></script>   
+    </head>
+    <body>
+        <!-- Component de cabeçalho -->
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Integração com Pinterest</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Component do conteúdo geral da página. -->
+        <div class="container">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Álbuns
+                    <a href="#" data-toggle="modal" data-target="#myModal">Novo</a>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div id="album">
+                        </div>
+                    </div>
+                </div>
+            </div>   
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Fotos
+                    <a href="#" data-toggle="modal" data-target="#modalFoto">Novo</a>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div id="fotos">
+                        </div>
+                    </div>
+                </div>
+            </div>        
+
+            <!-- Component modal para cadastro de albuns. -->
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Novo Álbum</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="nomeAlbum">Nome:</label>
+                            <input type="text" class="form-control" id="nomeAlbum">
+                        </div>
+                        <div class="form-group">
+                            <label for="descAlbum">Descrição:</label>
+                            <input type="text" class="form-control" id="descAlbum">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" onclick="createBoard()">Salvar</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <!-- Component modal para cadastro de foto. -->
+            <div class="modal fade" id="modalFoto" role="dialog">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Nova Foto</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Álbum
+                                <span class="caret"></span></button>
+                                <ul class="dropdown-menu" id="dropAlbuns">
+                                </ul>
+                                <span id="txtAlbumSelected"></span>
+                            </div>                   
+                            <div class="form-group">
+                                <label for="notaFoto">Nota:</label>
+                                <input type="text" class="form-control" id="notaFoto">
+                            </div>
+                            <div class="form-group">
+                                <label for="image">Link da imagem:</label>
+                                <input type="text" class="form-control" id="image">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal" onclick="cratePin()">Salvar</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>                   
+
+            <div class="footer">copyright 2017</div>
+        </div>
+    </body>
+</html>
